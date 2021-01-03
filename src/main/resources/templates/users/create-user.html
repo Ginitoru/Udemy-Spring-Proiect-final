@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/style-create-user.css">
+</head>
+<body>
+<section>
+    <div class="container">
+
+
+        <h1>Save User</h1>
+
+        <form action ="#" th:action="@{/users/create}"
+              th:object="${user}" method="POST">
+
+            <div class="control">
+                <input type="text" th:field="*{firstName}" placeholder="First Name">
+            </div>
+
+            <div class = control>
+                <input type="text" th:field="*{lastName}" placeholder="Last Name">
+            </div>
+
+            <div class="control">
+                <input type="email" th:field="*{emailAdress}" placeholder="Email Adress">
+            </div>
+
+            <div class="control">
+                <input type="text" th:field="*{userName}" placeholder="Username">
+            </div>
+
+            <div class="control">
+                <input type="text" th:field="*{phoneNumber}" placeholder="Phone number">
+            </div>
+
+            <div class="control">
+                <input type="password" th:field="*{password}" placeholder="Password">
+            </div>
+
+            <div class="control">
+                <input type="text" th:field="*{roles}" placeholder="Roles">
+            </div>
+
+
+            <div class="control">
+                <input type="submit" value="Create User" >
+            </div>
+
+            <div class="link">
+                <a th:href="@{/login}">To login page</a>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+
+</body>
+</html>
